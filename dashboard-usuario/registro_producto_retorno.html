@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Producto Retornado</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .background-container {
+        position: relative;
+        background-image: url("https://plus.unsplash.com/premium_photo-1661508294253-a7b36a759348?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); 
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="background-container">
+      <div class="overlay"></div>
+      <div class="content">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 p-4 shadow-md">
+          <div class="container mx-auto flex justify-between items-center">
+            <a href="dashboard.html" class="text-white text-2xl font-bold"
+              >Dogma</a
+            >
+            <ul class="flex space-x-12">
+              <li>
+                <a
+                  href="dashboard.html"
+                  class="text-white font-semibold hover:text-gray-300"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="registro_producto_retorno.html"
+                  class="text-white font-semibold hover:text-gray-300"
+                  >Registro Producto Retornado</a
+                >
+              </li>
+              <li>
+                <a
+                  href="control_inventario.html"
+                  class="text-white font-semibold hover:text-gray-300"
+                  >Control de Inventario</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Registro de Producto Retornado Form -->
+        <section class="flex justify-center items-center h-screen">
+          <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">
+              Registro de Producto Retornado
+            </h2>
+            <form action="/registrarProductoRetornado" method="post">
+              <div class="mb-4">
+                <label
+                  for="producto"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Producto</label
+                >
+                <input
+                  type="text"
+                  id="producto"
+                  name="producto"
+                  class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  placeholder="Introduce el producto"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="lote" class="block text-gray-700 font-semibold mb-2"
+                  >Código de Lote</label
+                >
+                <input
+                  type="text"
+                  id="lote"
+                  name="lote"
+                  class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  placeholder="Introduce el código de lote"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="cantidad"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Cantidad Retornada</label
+                >
+                <input
+                  type="number"
+                  id="cantidad"
+                  name="cantidad"
+                  class="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  placeholder="Introduce la cantidad retornada"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300"
+              >
+                Registrar Retorno
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-blue-600 py-4 text-white text-center mt-8">
+          <div class="container mx-auto">
+            &copy; 2024 Dogma. Todos los derechos reservados.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

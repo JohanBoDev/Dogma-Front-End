@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard del Usuario</title>
+    <!-- Link al archivo de estilos de Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .background-container {
+        position: relative;
+        background-image: url("https://plus.unsplash.com/premium_photo-1661764570116-b1b0a2da783c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); 
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <div class="background-container">
+      <div class="overlay"></div>
+      <div class="content">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 p-4 shadow-md">
+          <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Dogma</a>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="#" class="text-white font-semibold hover:text-gray-300"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-semibold hover:text-gray-300"
+                  >Perfil</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white font-semibold hover:text-gray-300"
+                  >Cerrar Sesión</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Container principal del Dashboard -->
+        <div class="container mx-auto p-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Panel de Información de Usuario -->
+            <div
+              class="col-span-1 bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+            >
+              <!-- Imagen de Perfil Redondeada -->
+              <img
+                class="w-32 h-32 rounded-full object-cover border-4 border-blue-500"
+                src="https://via.placeholder.com/150"
+                alt="Foto de Perfil"
+              />
+
+              <!-- Información del Usuario -->
+              <h2 class="text-2xl font-bold mt-4 text-center text-gray-800">
+                Nombre Completo
+              </h2>
+              <p class="text-lg text-gray-700 text-center">Empresa XYZ</p>
+              <p class="mt-2 text-gray-600">Teléfono: +57 310 7681955</p>
+              <p class="text-gray-600">Correo: usuario@empresa.com</p>
+            </div>
+
+            <!-- Opciones de Navegación -->
+            <div class="col-span-3 bg-white p-6 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                Opciones del Dashboard
+              </h2>
+
+              <!-- Grid para los botones de navegación -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a
+                  href="registro_producto_entrante.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Registro de Producto Entrante</a
+                >
+                <a
+                  href="confirmacion_producto_despachado.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Confirmación de Producto Despachado</a
+                >
+                <a
+                  href="generacion_reportes.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Generación de Reportes</a
+                >
+                <a
+                  href="documentacion_producto_despachado.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Documentación de Producto Despachado</a
+                >
+                <a
+                  href="registro_producto_retorno.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Registro de Producto Retornado</a
+                >
+                <a
+                  href="documentacion_producto_mal_estado.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Documentación de Productos en Mal Estado</a
+                >
+                <a
+                  href="control_inventario.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Control de Inventario</a
+                >
+                <a
+                  href="consulta_existencias_mermas.html"
+                  class="block bg-blue-600 text-white font-semibold py-4 px-4 rounded-lg hover:bg-blue-700 text-center transition-all duration-200"
+                  >Consulta de Existencias con Mermas</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-blue-600 py-4 text-white text-center mt-8">
+            <div class="container mx-auto">
+              &copy; 2024 Dogma. Todos los derechos reservados.
+            </div>
+          </footer>
+      </div>
+    </div>
+  </body>
+</html>

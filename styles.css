@@ -1,0 +1,18 @@
+.bg-dogma{
+background-image: url('https://images.prismic.io/simpliroute/56dc27da-0a15-4ad9-a9f4-74f095b4e815_sistema+de+inventarios.jpg?auto=compress,format');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: bottom;
+}
+
+.sombra{
+    text-shadow: 4px 4px 10px #0000008e;
+}
+
+.bg-sobre-nosotros{
+    background-image: url('https://pcn.pt/wp-content/uploads/2015/12/inventario-1024x448.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
